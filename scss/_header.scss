@@ -1,0 +1,128 @@
+@import "./variable.scss";
+
+@mixin flex__jus_ali_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 90px;
+    max-width: 85%;
+    margin: 0 auto;
+
+    .container {
+        padding: 20px 0;
+        width: 88%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: inherit;
+        margin: 0 auto;
+
+        .brand {
+            font-size: 1.5rem;
+            margin-right: 0;
+            padding-bottom: 0.15rem;
+            padding-top: 0.15rem;
+            white-space: nowrap;
+
+        }
+
+        .wrapper__navbar {
+            display: flex;
+            flex: 1;
+            justify-content: space-around;
+            flex-grow: 1;
+
+            .navbar {
+                display: flex;
+                align-items: center;
+                // justify-content: space-between;
+                // width: 100%;
+                // flex: 1;
+                margin: 0 auto;
+                list-style: none;
+
+                .navbar--first__child {
+                    position: relative;
+
+                    .sub__nav {
+                        display: none;
+                    }
+
+                    &:hover {
+                        .sub__nav {
+                            width: 450px;
+                            position: absolute;
+                            display: flex;
+                            left: -260%;
+
+                            .wrap__img {
+                                width: 80%;
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .navbar--third__child {
+                    position: relative;
+
+                    &:hover .sub__nav {
+                        display: block;
+                    }
+
+                    @include position(100%, 100%);
+
+                }
+
+                &__list {
+                    display: block;
+                    padding: 2rem 2.5rem;
+                    cursor: pointer;
+
+                    a {
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: rgb(80, 102, 144);
+
+                        &:hover {
+                            color: $color-primary;
+                        }
+                    }
+                }
+            }
+
+            .navbar__btn {
+                @include flex__jus_ali_center;
+                text-decoration: none;
+                margin-left: 5rem;
+
+                button {
+                    background-color: $color-primary;
+                    border: 1px solid #fff;
+                    color: #fff;
+                    padding: 16px 16px;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    font-weight: 550;
+                    height: 50px;
+                    width: 120px;
+
+                    transition: transform 0.2s linear;
+
+                    &:hover {
+                        box-shadow: 0 1rem 2.5rem rgba(22, 28, 45, .1), 0 .5rem 1rem -.75rem rgba(22, 28, 45, .1) !important;
+                        transform: translate3d(0, -3px, 0);
+                    }
+                }
+            }
+        }
+    }
+}

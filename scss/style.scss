@@ -1,0 +1,23 @@
+@import "./content";
+@import "./header";
+@import "./variable.scss";
+@import "./footer";
+* {
+    // scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#ffffff;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Times New Roman', Times, serif;
+}
+// .app {
+//     // max-width:1021px;
+//     // width: 100%;
+//     // margin: 0 auto;
+// }
+
